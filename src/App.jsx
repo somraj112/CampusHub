@@ -7,11 +7,18 @@ import LostFound from "./pages/LostFound";
 import Marketplace from "./pages/Marketplace";
 import Notes from "./pages/Notes";
 import Schedule from "./pages/Schedule";
+import ClickSpark from "./animations/ClickSpark";
+
 function App() {
-
-
   return (
     <>
+    <ClickSpark
+      sparkColor='#fff'
+      sparkSize={10}
+      sparkRadius={15}
+      sparkCount={8}
+      duration={400}
+    >
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
@@ -21,6 +28,7 @@ function App() {
         <Route path="/notes" element={<Notes />} />
         <Route path="/schedule" element={<Schedule />} />
       </Routes>
+      </ClickSpark>
     </>
   );
 }
